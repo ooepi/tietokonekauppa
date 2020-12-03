@@ -8,6 +8,7 @@
     </head>
 
     <body>
+    <div class="content">
         <div class="headingdiv">
             <a href="index.html">
                 <img src="logoplaceholder.png" alt="Tietokonekauppa" width="200" height="65">
@@ -24,13 +25,395 @@
         </div>
 
         <div class="maincontainer">
-            <div class="sidebardiv">
+            <div class="sidebar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="tietokoneet.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Komponentit</button>
+                    <div class="panel">
+                        <a href="prosessorit.html">
+                            <div>
+                                <p>Prosessorit</p>
+                            </div>
+                        </a>
+                        <a href="naytonohjaimet.html">
+                            <div>
+                                <p>Näytönohjaimet</p>
+                            </div>
+                        </a>
+                        <a href="ram.html">
+                            <div>
+                                <p>Ram -muistit</p>
+                            </div>
+                        </a>
+                        <a href="emolevyt.html">
+                            <div>
+                                <p>Emolevyt</p>
+                            </div>
+                        </a>
+                        <a href="hddssd.html">
+                            <div>
+                                <p>HDD/SSD</p>
+                            </div>
+                        </a>
+                    </div>
+                
+                <a href="muut.html">
+                    <div>
+                        <p>Muut tuotteet</p>
+                    </div>
+                </a>
+
+                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="maindiv">
+                <div class="slideshow">
+                    <img class="slides" src="images/sale.jpg1" alt="placeholder1">
+                    <img class="slides" src="images/sale2.jpg1" alt="placeholder2">
+                    <img class="slides" src="images/sale3.jpg1" alt="placeholder3">
+                    <script>
+                        var index = 0;
+                        slideshow();
+                    </script>
+                </div>
+                
+                <p class="mainpagetext">Suosittelemme</p>
+                
+
+                <div class="productdiv">
+
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mainpagetext">Tarjouksessa</p>
+
+                <div class="productdiv">
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mainpagetext">Uutuudet</p>
+
+                <div class="productdiv">
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productcard">
+                        <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="maindiv">
-    
-            </div>
         </div>
+    </div>
 
     </body>
 </html>
+<!--
+
+    <a href="product.html">
+                            <img class="productcardimage" src="images/productplaceholder.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productname" href="product.html">Tuotteennimi</a>
+                        <ul>
+                            <li>speksi1</li>
+                            <li>speksi2</li>
+                            <li>speksi3</li>
+                        </ul>
+                        <div class="cardlower">
+                            <div class="pricebox">
+                                <p>9999</p>
+                            </div>
+                            <button class="addtocart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+
+-->
