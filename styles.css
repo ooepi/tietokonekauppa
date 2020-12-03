@@ -1,6 +1,6 @@
 /* Heading styles*/
 
-.headingdiv {
+.headingDiv {
     background-color: white;
     width: 1200px;
     height: 60px;
@@ -13,7 +13,7 @@
     justify-content: space-between;
 }
 
-.headingdiv input[type="text"] {
+.headingDiv input[type="text"] {
     float: center;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -23,21 +23,22 @@
     border-radius: 5px;
 }
 
-.logincart {
+.loginCart {
     margin-top: 10px;
     margin-right: 20px;
 }
 
 /* Sidebar Styles */
 
-.sidebar {
+.sideBar {
     background-color: white;
     width: 200px;
+    padding-top: 20px;
     /*border: 1px outset black;*/
     text-decoration: none;
 }
 
-.sidebar a {
+.sideBar a {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: #1e1e1e;
@@ -51,7 +52,7 @@
     text-decoration: none;
 }
 
-.sidebar a:hover {
+.sideBar a:hover {
     background-color: #dddddd;
 }
 
@@ -106,20 +107,20 @@ body {
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.maindiv {
-    background-color: white;
+.mainDiv {
+    background-color: #4f55a30a;
     width: 90%;
     /*border: 1px outset black;*/
 }
 
-.maincontainer {
+.mainContainer {
     width: 1200px;
     display: flex;
 }
 
 /* Slideshow */
 
-.slideshow {
+.slideShow {
     margin: 20px;
     height: 450px;
     background-color: #dddddd;
@@ -133,21 +134,27 @@ body {
 
 /* Product cards */
 
-.productdiv {
+.productDiv {
     height: 400px;
     margin: 20px;
-    background-color: white;
+    background-color: #4f55a300;
     display: flex;
     vertical-align: center;
 }
 
-.mainpagetext {
+.mainPageText {
     padding-left: 40px;
     font-size: 20px;
     color: #656565;
 }
 
-.productcard {
+.mainPageTextLarge {
+    padding-left: 40px;
+    font-size: 40px;
+    color: #656565;
+}
+
+.productCard {
     color: #656565;
     display: block;
     height: 380px;
@@ -155,17 +162,24 @@ body {
     margin: 10px;
 }
 
-.productcard:hover {
+.productCard:hover {
     box-shadow: 5px 5px 10px #dadada;
     background-color: #fafafa;
 }
 
-.productcardimage {
+.productCardImage {
+    display: flex;
+    align-items: center;
     height: 50%;
     width: 100%;
 }
 
-.cardlower {
+.productCardImageFull {
+    max-height: 100%;
+    width: 100%;
+}
+
+.cardLower {
     height: 67px;
     display: flex;
     flex-direction: row;
@@ -173,7 +187,7 @@ body {
     justify-content: space-between;
 }
 
-.productname {
+.productName {
     display: block;
     font-weight: bold;
     font-size: 17px;
@@ -182,7 +196,17 @@ body {
     color: #656565;
 }
 
-.pricebox {
+.productNameLarge {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #656565;
+    padding-top: 15px;
+}
+
+.priceBox {
     background-color: #e5e5e5;
     height: 60px;
     width: 100px;
@@ -194,7 +218,7 @@ body {
     line-height: 0px;
 }
 
-.addtocart {
+.addToCart {
     background-color: #e5e5e5;
     color: #656565;
     height: 60px;
@@ -206,6 +230,77 @@ body {
     cursor: pointer;
 }
 
-.addtocart:hover {
+.addToCart:hover {
     box-shadow: 2px 2px 1px #dadada;
+    border: solid 1px white;
+    color: white;
+    background-color: #4f54a3;
+}
+
+.productPageMainDiv {
+    display: flex;
+    background-color: #fafafa;
+    width: 90%;
+    /*border: 1px outset black;*/
+}
+
+.productPagePictureDiv {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    margin: 20px;
+}
+
+.productPageInfoDiv {
+    color: #656565;
+    width: 50%;
+    height: 500px;
+    margin: 20px;
+}
+
+.productPagePicture {
+    width: 100%;
+    max-height: 100%;
+}
+
+.productPageInfoBottom {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceBoxLarge {
+    background-color: #e5e5e5;
+    height: 80px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    line-height: 0px;
+    align-items: center;
+}
+
+.addToCartLarge {
+    background-color: #e5e5e5;
+    color: #656565;
+    height: 80px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.addToCartLarge:hover {
+    box-shadow: 2px 2px 1px #dadada;
+    border: solid 1px white;
+    color: white;
+    background-color: #4f54a3;
 }

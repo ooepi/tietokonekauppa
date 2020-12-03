@@ -1,8 +1,149 @@
-<html>
+<!DOCTYPE html>
+<html lang="fi">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tietokonekauppa.fi</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
     </head>
+
     <body>
-        <a href="index.html">Takaisin</a>
+    <div class="content">
+        <div class="headingDiv">
+            <a href="index.html">
+                <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
+            </a>
+            <input type="text" placeholder=" Haku..">
+            <div class="loginCart">
+                <a href="index.html">
+                    <img src="cart.png" alt="shoppingcart" width="50" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="mainContainer">
+            <div class="sideBar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="keskusyksikot.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="mainDiv">
+               
+                <p class="mainPageTextLarge">Hiiret</p>
+                
+
+                <div class="productDiv">
+                    <div class="productCard">
+                        <a href="products/logitech-mxkeys.html">
+                            <img class="productCardImage" src="https://resource.logitech.com/w_900,h_900,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/keyboards/mx-keys/gallery/deu-mx-keys-gallery-npr-graphite-front.png?v=1" alt="haloo">
+                        </a>
+                        
+                        <a class="productName" href="products/logitech-mxkeys.html">Logitech MX keys</a>
+                        <ul>
+                            <li>Usealle laitteelle</li>
+                            <li>Langaton</li>
+                            <li>Taustavalaistu</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>119</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <a href="products/logitech-g915.html">
+                                <img class="productCardImageFull" src="https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto:best,f_auto,dpr_auto/content/dam/gaming/en/products/g915/g915-intro-desktop.png?v=1" alt="haloo">
+                            </a>
+                        </div>
+                        
+                        <a class="productName" href="products/logitech-g915.html">Logitech G915</a>
+                        <ul>
+                            <li>Langaton</li>
+                            <li>Mekaaninen</li>
+                            <li>Akunkesto 30h</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>219</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

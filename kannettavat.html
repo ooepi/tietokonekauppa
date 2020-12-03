@@ -1,8 +1,152 @@
-<html>
+<!DOCTYPE html>
+<html lang="fi">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tietokonekauppa.fi</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
     </head>
+
     <body>
-        <a href="index.html">Takaisin</a>
+    <div class="content">
+        <div class="headingDiv">
+            <a href="index.html">
+                <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
+            </a>
+            <input type="text" placeholder=" Haku..">
+            <div class="loginCart">
+                <a href="index.html">
+                    <img src="cart.png" alt="shoppingcart" width="50" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="mainContainer">
+            <div class="sideBar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="keskusyksikot.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="mainDiv">
+               
+                <p class="mainPageTextLarge">Kannettavat tietokoneet</p>
+                
+
+                <div class="productDiv">
+
+                    
+                        <div class="productCard">
+                            <a href="products/lenovo-ideapad.html">
+                                <img class="productCardImage" src="https://www.lenovo.com/medias/lenovo-laptops-ideapad-5-14-intel-hero.png?context=bWFzdGVyfHJvb3R8Mjc2NDczfGltYWdlL3BuZ3xoOGUvaDIxLzEwNzQ4OTkxNDcxNjQ2LnBuZ3wzOGMzNDA5MDIyNDg1MDEyOGRlZmU1MTBkMTBjMWE3YTAyOGI5MGFiMWE2ZjJlMTQyOWQxYjYyZjYxMzc4OGZj" alt="haloo">
+                            </a>
+                            
+                            <a class="productName" href="products/lenovo-ideapad.html">Lenovo Ideapad 5i</a>
+                            <ul>
+                                <li>Intel Core i5</li>
+                                <li>8GB DDR4</li>
+                                <li>M.2 NVMe</li>
+                            </ul>
+                            <div class="cardLower">
+                                <div class="priceBox">
+                                    <p>799</p>
+                                </div>
+                                <button class="addToCart" onclick="addtobasket()">
+                                    Lisää<br>ostoskoriin
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <a href="products/lenovo-legion.html">
+                                <img class="productCardImage" src="https://images-na.ssl-images-amazon.com/images/I/61WiuQUm1hL._AC_SL1200_.jpg" alt="haloo">
+                            </a>
+                            
+                            <a class="productName" href="products/lenovo-legion.html">Lenovo Legion Y740</a>
+                            <ul>
+                                <li>15,6"</li>
+                                <li>Intel Core i7-9750H</li>
+                                <li>GeForce RTX2070</li>
+                            </ul>
+                            <div class="cardLower">
+                                <div class="priceBox">
+                                    <p>1759</p>
+                                </div>
+                                <button class="addToCart" onclick="addtobasket()">
+                                    Lisää<br>ostoskoriin
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,150 @@
-<html>
+<!DOCTYPE html>
+<html lang="fi">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tietokonekauppa.fi</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
     </head>
+
     <body>
-        <a href="index.html">Takaisin</a>
+    <div class="content">
+        <div class="headingDiv">
+            <a href="index.html">
+                <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
+            </a>
+            <input type="text" placeholder=" Haku..">
+            <div class="loginCart">
+                <a href="index.html">
+                    <img src="cart.png" alt="shoppingcart" width="50" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="mainContainer">
+            <div class="sideBar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="keskusyksikot.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="mainDiv">
+               
+                <p class="mainPageTextLarge">Hiiret</p>
+                
+
+                <div class="productDiv">
+
+                    <div class="productCard">
+                        <a href="products/logitech-mx3.html">
+                            <img class="productCardImage" src="https://resource.logitech.com/w_900,h_900,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/mice/mx-master-3/gallery/mx-master-product-gallery-graphite-top.png?v=1" alt="haloo">
+                        </a>
+                        
+                        <a class="productName" href="products/logitech-mx3.html">Logitech MX master 3</a>
+                        <ul>
+                            <li>Langaton</li>
+                            <li>Magneettirulla</li>
+                            <li>Usealle laitteelle</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>119</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productCard">
+                        <a href="products/logitech-prox.html">
+                            <img class="productCardImage" src="https://kauppa.telia.fi/yksityisille/images/product/500x500/01_LogitechGProXSuperlightpelihiiri_black.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productName" href="products/logitech-prox.html">Logitech Pro X</a>
+                        <ul>
+                            <li>Superkevyt</li>
+                            <li>Langaton</li>
+                            <li>5 painiketta</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>149</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

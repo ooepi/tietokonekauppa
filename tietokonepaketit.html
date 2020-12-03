@@ -1,8 +1,137 @@
-<html>
+<!DOCTYPE html>
+<html lang="fi">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tietokonekauppa.fi</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
     </head>
+
     <body>
-        <a href="index.html">Takaisin</a>
+    <div class="content">
+        <div class="headingDiv">
+            <a href="index.html">
+                <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
+            </a>
+            <input type="text" placeholder=" Haku..">
+            <div class="loginCart">
+                <a href="index.html">
+                    <img src="cart.png" alt="shoppingcart" width="50" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="mainContainer">
+            <div class="sideBar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="keskusyksikot.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="mainDiv">
+               
+                <p class="mainPageTextLarge">Tietokonepaketit</p>
+                
+
+                <div class="productDiv">
+                    <div class="productCard">
+                        <a href="products/asus-s340-pckg.html">
+                            <img class="productCardImage" src="https://www.asus.com/websites/global/products/nlJbIGI1RAsaagVW/assets/images/small/2x/sec_bg2.jpg" alt="haloo">
+                        </a>
+                        
+                        <a class="productName" href="products/asus-s340-pckg.html">Asus S340 paketti</a>
+                        <ul>
+                            <li>Keskusyksikkö</li>
+                            <li>Näyttö</li>
+                            <li>Hiiri ja Näppäimistö</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>799</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="productCard">
+                        <a href="products/hp-envy.html">
+                            <img class="productCardImage" src="https://store.hp.com/wcsstore/hpusstore/Treatment/Schumi_Envy_Aio_q4fy16_KSP1_prdt.png" alt="haloo">
+                        </a>
+                        
+                        <a class="productName" href="products/hp-envy.html">HP envy AIO</a>
+                        <ul>
+                            <li>Intel® Core™ i7</li>
+                            <li>GeForce® GTX 1050</li>
+                            <li>Windows 10 Home</li>
+                        </ul>
+                        <div class="cardLower">
+                            <div class="priceBox">
+                                <p>1799</p>
+                            </div>
+                            <button class="addToCart" onclick="addtobasket()">
+                                Lisää<br>ostoskoriin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     </body>
 </html>
