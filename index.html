@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fi">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <title>Tietokonekauppa.fi</title>
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js"></script>
@@ -14,7 +16,27 @@
             <a href="index.html">
                 <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
             </a>
-            <input type="text" placeholder=" Haku..">
+            <!-- start of freefind search box html -->
+            <table cellpadding=0 cellspacing=0 border=0 >
+                <tr>
+                    <td class="searchText">
+                        <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                        <input type="hidden" name="si" value="58557598">
+                        <input type="hidden" name="pid" value="r">
+                        <input type="hidden" name="n" value="0">
+                        <input type="hidden" name="_charset_" value="">
+                        <input type="hidden" name="bcd" value="&#247;">
+                        <input type="text" name="query" size="15"> 
+                        <input class="searchButton" type="submit" value="Haku">
+                        </form>
+                    </td>
+                </tr>
+                </table>
+                <!-- end of freefind search box html -->
+    <!--
+
+        <input type="text" placeholder=" Haku..">
+    -->
             <div class="loginCart">
                 <a href="ostoskori.html">
                     <img src="cart.svg" alt="shoppingcart" width="50" height="50">
@@ -362,8 +384,5 @@
             </div>
         </div>
     </div>
-
-    <a href='https://www.freepik.com/vectors/banner'>Banner vector created by BiZkettE1 - www.freepik.com</a>
-
     </body>
 </html>
