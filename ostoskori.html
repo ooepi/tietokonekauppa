@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tietokonekauppa.fi</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+    </head>
+
+    <div class="content">
+
+        
+        <div class="headingDiv">
+            <a href="index.html">
+                <img src="TietokonekauppaLogo.svg" alt="Tietokonekauppa" width="200" height="65">
+            </a>
+            <input type="text" placeholder=" Haku..">
+            <div class="loginCart">
+                <a href="ostoskori.html">
+                    <img src="cart.svg" alt="shoppingcart" width="50" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="mainContainer">
+            <div class="sideBar">
+                <button class="accordion">Tietokoneet</button>
+                    <div class="panel">
+                        <a href="keskusyksikot.html">
+                            <div>
+                                <p>Keskusyksiköt</p>
+                            </div>
+                        </a>
+                        <a href="tietokonepaketit.html">
+                            <div>
+                                <p>Tietokonepaketit</p>
+                            </div>
+                        </a>
+                        <a href="kannettavat.html">
+                            <div>
+                                <p>Kannettavat</p>
+                            </div>
+                        </a>
+                    </div>
+
+                <button class="accordion">Oheislaitteet</button>
+                    <div class="panel">
+                        <a href="naytot.html">
+                            <div>
+                                <p>Näytöt</p>
+                            </div>
+                        </a>
+                        <a href="hiiret.html">
+                            <div>
+                                <p>Hiiret</p>
+                            </div>
+                        </a>
+                        <a href="nappaimistot.html">
+                            <div>
+                                <p>Näppäimistöt</p>
+                            </div>
+                        </a>
+                    </div>                
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div class="shoppingCartMainDiv">
+                
+                <div class="shoppingCartLeft">
+                    <p class="productNameLarge">Tilaajan Tiedot</p>
+
+                    <label class="boldText" for="fname">Koko nimi: </label>
+                    <br>
+                    <input class="formTextBox" type="text" id="fname" name="firstname" placeholder="Matti Meikäläinen">
+                    <br>
+                    <br>
+                    <label class="boldText"  for="email">Sähköposti: </label>
+                    <br>
+                    <input class="formTextBox"  type="text" id="email" name="email" placeholder="m.meikalainen@email.fi">
+                    <br>
+                    <br>
+                    <label class="boldText"  for="street">Katuosoite: </label>
+                    <br>
+                    <input class="formTextBox"  class="boldText"  type="text" id="street" name="street" placeholder="Ojatie 16">
+                    <br>
+                    <br>
+                    <label class="boldText"  for="zip">Postinumero: </label>
+                    <br>
+                    <input class="formTextBox"  type="text" id="zip" name="zip" placeholder="65320">
+                    <br>
+                    <br>
+                    <label class="boldText"  for="city">Kaupunki: </label>
+                    <br>
+                    <input class="formTextBox"  type="text" id="city" name="city" placeholder="Vaasa">
+
+                    
+                </div>
+
+                <div class="shoppingCartRight">
+
+                    <div>
+                        <p class="productNameLarge">Ostoskori</p>
+                    </div>
+
+                    <div class="shoppingCartRightLower">
+                        <div>
+                            <p id="productName1"></p>
+                            <p id="productName2"></p>
+                            <p id="productName3"></p>
+                            <p id="productName4"></p>
+                            <br>
+                            <br>
+                            <p>Yhteensä</p>
+                        </div>
+                        <div>
+                            <p id="productPrice1"></p>
+                            <p id="productPrice2"></p>
+                            <p id="productPrice3"></p>
+                            <p id="productPrice4"></p>
+                            <br>
+                            <br>
+                            <p id="total"></p>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <script>
+                        products = {
+                            "products" : [
+                                {"id": "1", "name": "Asus S340", "price": 599},
+                                {"id": "2", "name": "MSI MAG META 5", "price": 1599},
+                                {"id": "3", "name": "Asus S340 Paketti", "price": 799},
+                                {"id": "4", "name": "HP Envy AIO", "price": 1799},
+                                {"id": "5", "name": "Lenovo Ideapad 5i", "price": 799},
+                                {"id": "6", "name": "Lenovo Legion Y740", "price": 1759},
+                                {"id": "7", "name": "Asus BE24EQK", "price": 169},
+                                {"id": "8", "name": "ASUS TUF VG32VQ1B", "price": 215},
+                                {"id": "9", "name": "Logitech MX Master 3", "price": 119},
+                                {"id": "10", "name": "Logitech Pro X", "price": 149},
+                                {"id": "11", "name": "Logitech MX Keys", "price": 119},
+                                {"id": "12", "name": "Logitech G915", "price": 219}
+                            ]
+                        }
+
+                    document.getElementById("productName1").innerHTML = products.products[0].name;
+                    document.getElementById("productPrice1").innerHTML = products.products[0].price + "€";
+                    document.getElementById("productName2").innerHTML = products.products[7].name;
+                    document.getElementById("productPrice2").innerHTML = products.products[7].price + "€";
+                    document.getElementById("productName3").innerHTML = products.products[8].name;
+                    document.getElementById("productPrice3").innerHTML = products.products[8].price + "€";
+                    document.getElementById("productName4").innerHTML = products.products[10].name;
+                    document.getElementById("productPrice4").innerHTML = products.products[10].price + "€";
+
+                    var total = products.products[0].price + products.products[7].price + products.products[8].price + products.products[10].price;
+
+                    document.getElementById("total").innerHTML = total + "€";
+                        
+                    </script>
+<div class="shoppingCartRightLowerLower">
+
+    <button class="addToCartLarge" onclick="order()">
+        Tilaa
+    </button>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

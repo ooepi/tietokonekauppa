@@ -13,3 +13,7 @@ function slideshow() {
 function addtobasket() {
     alert("Tuote lisättiin ostoskoriin!");
 }
+
+function order() {
+    alert("Kiitos tilauksesta");
+}

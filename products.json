@@ -1,0 +1,17 @@
+{
+    "products" : [
+        {"id": "1", "name": "Asus S340", "price": 599},
+        {"id": "2", "name": "MSI MAG META 5", "price": 1599},
+        {"id": "3", "name": "Asus S340 Paketti", "price": 799},
+        {"id": "4", "name": "HP Envy AIO", "price": 1799},
+        {"id": "5", "name": "Lenovo Ideapad 5i", "price": 799},
+        {"id": "6", "name": "Lenovo Legion Y740", "price": 1759},
+        {"id": "7", "name": "Asus BE24EQK", "price": 169},
+        {"id": "8", "name": "ASUS TUF VG32VQ1B", "price": 215},
+        {"id": "9", "name": "Logitech MX Master 3", "price": 119},
+        {"id": "10", "name": "Logitech Pro X", "price": 149},
+        {"id": "11", "name": "Logitech MX Keys", "price": 119},
+        {"id": "12", "name": "Logitech G915", "price": 219}
+    ]
+}
+
